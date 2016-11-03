@@ -7,6 +7,8 @@ import javax.swing.OverlayLayout;
 import com.cqb.javaenum.EnumDemo.month;
 
 public class TestEnum {
+	
+
 	public static void stamp(month mo) {
 		PrintStream out = System.out;
 		switch (mo) {
@@ -62,6 +64,10 @@ public class TestEnum {
 
 		for (int i = 0; i < month.values().length; i++) {
 			System.out.println(month.values()[i]);
+		}
+		
+		for (EnumDemo2 string : EnumDemo2.values()) {
+			 System.out.println(string);
 		}
 	}
 }
