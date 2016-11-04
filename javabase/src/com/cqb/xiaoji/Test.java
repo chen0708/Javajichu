@@ -18,7 +18,7 @@ public class Test {
 		System.out.println("请输入您准备花多少钱");
 		int money = input.nextInt();
 		System.out.println("您可购买： ");
-
+		input.close();
 		for (int gongji = 0; gongji <= money / 5; ++gongji) {
 			int muji = (3 * money - num - 14 * gongji) / 8;
 			int xiaoji = num - gongji - muji;
