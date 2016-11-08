@@ -4,7 +4,7 @@ public class ClassDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Class clazz
+	//	Class clazz
 		
 		Person person = new Person();
 		person.setName("lisi");
