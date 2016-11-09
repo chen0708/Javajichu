@@ -2,8 +2,8 @@ package com.cqb.reflect;
 
 public class Person {
 	private String name;
-	private int age;
-
+	public int age;
+   int high;
 	public String getName() {
 		return name;
 	}
@@ -27,6 +27,26 @@ public class Person {
 
 	public void show() {
 		System.out.println("我是一个人");
+	}
+
+	public Person() {
+		super();
+	}
+
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	public Person(int age) {
+		super();
+		this.age = age;
+	}
+
+	public Person(String name) {
+		super();
+		this.name = name;
 	}
 
 	public void person(String nation) {
