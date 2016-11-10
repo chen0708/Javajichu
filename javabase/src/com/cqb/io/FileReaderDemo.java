@@ -3,11 +3,9 @@ package com.cqb.io;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.io.Reader;
 
 public class FileReaderDemo {
 
@@ -22,14 +20,14 @@ public class FileReaderDemo {
 			System.out.println("文件创建完成 : " + b);
 		} // 判断file1文件是否存在，若不存在则新建一个
 
-		FileOutputStream fw = new FileOutputStream(file1);
-		FileReader fis = new FileReader(file1);
-		//InputStreamReader isr = new InputStreamReader(fis);
-		//BufferedReader br = new BufferedReader(fis);
+		FileWriter fw = new FileWriter(file1);
+		FileInputStream fis = new FileInputStream(file1);
+		InputStreamReader isr = new InputStreamReader(fis);
+		BufferedReader br = new BufferedReader(isr);
 		// 定义fw和br进行数据的读写操作。
 
 		// 写入配置文件信息，写完之后刷新数据流
-		/*fw.write("这是一个JAVA的上机题的文档文件； \r\n");
+		fw.write("这是一个JAVA的上机题的文档文件； \r\n");
 		fw.write(" 一个正整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问这个该数是多少？\r\n");
 		fw.write("需要的参数如下：通过本程序读取文件，解析下面的字符串得到需要的参数值； \r\n");
 		fw.write("100#168#1000\r\n");
@@ -38,7 +36,7 @@ public class FileReaderDemo {
 		fw.write("解题思路：创建文件，先判断文件是否存在，若不存在则新建，若存在，则跳过；\r\n");
 		fw.write("定义FileWriter字符流的fw进行写入操作，定义FileInputStream的字节流fis进行读取文件内容，将fis转换为字符流isr方便程序处理，再将isr存入缓冲流中；\r\n");
 		fw.write("读取文件内容至控制台并利用split将数值解析至数组中。\r\n");
-		fw.flush();*/
+		fw.flush();
 
 		String str;
 		while ((str = br.readLine()) != null) {// 判断下一行是否为空，若不为空，则进行读取操作

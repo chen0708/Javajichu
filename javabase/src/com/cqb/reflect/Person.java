@@ -1,5 +1,7 @@
 package com.cqb.reflect;
 
+import sun.applet.Main;
+
 public class Person {
 	private String name;
 	public int age;
@@ -52,4 +54,5 @@ public class Person {
 	public void person(String nation) {
 		System.out.println("我的国籍是 ： " + nation);
 	}
+
 }

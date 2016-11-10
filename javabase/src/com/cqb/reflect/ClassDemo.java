@@ -50,7 +50,7 @@ public class ClassDemo {
 		Field[] b= clazz4.getDeclaredFields();
 		for (Field field : a) {
 			
-			
+			@Override
 			System.out.print(field.getModifiers());
 
 			

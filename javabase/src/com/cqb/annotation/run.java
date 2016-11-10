@@ -9,7 +9,7 @@ public class run {
 		String str = "className.methodName";
         Class clazz=Class.forName(str);
         
-        clazz.
+        //clazz.
 	}
 
 }
